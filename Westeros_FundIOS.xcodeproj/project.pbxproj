@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F66CEF12204AB462005878F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF11204AB462005878F1 /* AppDelegate.swift */; };
-		F66CEF14204AB462005878F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF13204AB462005878F1 /* ViewController.swift */; };
-		F66CEF17204AB462005878F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF15204AB462005878F1 /* Main.storyboard */; };
 		F66CEF19204AB462005878F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF18204AB462005878F1 /* Assets.xcassets */; };
 		F66CEF1C204AB462005878F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF1A204AB462005878F1 /* LaunchScreen.storyboard */; };
-		F66CEF27204AB462005878F1 /* Westeros_FundIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF26204AB462005878F1 /* Westeros_FundIOSTests.swift */; };
+		F66CEF32204AB588005878F1 /* SeasonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF31204AB588005878F1 /* SeasonTests.swift */; };
+		F66CEF37204AB6A3005878F1 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF36204AB6A3005878F1 /* Season.swift */; };
+		F66CEF3B204AC928005878F1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF3A204AC928005878F1 /* Episode.swift */; };
+		F66CEF3D204ACE3C005878F1 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF3C204ACE3C005878F1 /* EpisodeTests.swift */; };
+		F66CEF3F204ADA38005878F1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF3E204ADA38005878F1 /* Repository.swift */; };
+		F66CEF46204B0D14005878F1 /* SeasonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF44204B0D14005878F1 /* SeasonDetailViewController.swift */; };
+		F66CEF47204B0D14005878F1 /* SeasonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF45204B0D14005878F1 /* SeasonDetailViewController.xib */; };
+		F66CEF4E204B19A6005878F1 /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF4B204B19A6005878F1 /* lannister.jpg */; };
+		F66CEF4F204B19A6005878F1 /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF4C204B19A6005878F1 /* codeIsComing.png */; };
+		F66CEF50204B19A6005878F1 /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF4D204B19A6005878F1 /* targaryenSmall.jpg */; };
+		F66CEF53204B2AC0005878F1 /* SeasonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */; };
+		F66CEF54204B2AC0005878F1 /* SeasonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +37,23 @@
 /* Begin PBXFileReference section */
 		F66CEF0E204AB462005878F1 /* Westeros_FundIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros_FundIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66CEF11204AB462005878F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F66CEF13204AB462005878F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F66CEF16204AB462005878F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F66CEF18204AB462005878F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F66CEF1B204AB462005878F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F66CEF1D204AB462005878F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F66CEF22204AB462005878F1 /* Westeros_FundIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Westeros_FundIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F66CEF26204AB462005878F1 /* Westeros_FundIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westeros_FundIOSTests.swift; sourceTree = "<group>"; };
 		F66CEF28204AB462005878F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66CEF31204AB588005878F1 /* SeasonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonTests.swift; sourceTree = "<group>"; };
+		F66CEF36204AB6A3005878F1 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		F66CEF3A204AC928005878F1 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		F66CEF3C204ACE3C005878F1 /* EpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
+		F66CEF3E204ADA38005878F1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F66CEF44204B0D14005878F1 /* SeasonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetailViewController.swift; sourceTree = "<group>"; };
+		F66CEF45204B0D14005878F1 /* SeasonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonDetailViewController.xib; sourceTree = "<group>"; };
+		F66CEF4B204B19A6005878F1 /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
+		F66CEF4C204B19A6005878F1 /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
+		F66CEF4D204B19A6005878F1 /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
+		F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewController.swift; sourceTree = "<group>"; };
+		F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +95,10 @@
 		F66CEF10204AB462005878F1 /* Westeros_FundIOS */ = {
 			isa = PBXGroup;
 			children = (
+				F66CEF35204AB5DD005878F1 /* Controllers */,
+				F66CEF34204AB5D7005878F1 /* Domain */,
+				F66CEF33204AB5D0005878F1 /* Assets */,
 				F66CEF11204AB462005878F1 /* AppDelegate.swift */,
-				F66CEF13204AB462005878F1 /* ViewController.swift */,
-				F66CEF15204AB462005878F1 /* Main.storyboard */,
 				F66CEF18204AB462005878F1 /* Assets.xcassets */,
 				F66CEF1A204AB462005878F1 /* LaunchScreen.storyboard */,
 				F66CEF1D204AB462005878F1 /* Info.plist */,
@@ -90,10 +109,42 @@
 		F66CEF25204AB462005878F1 /* Westeros_FundIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F66CEF26204AB462005878F1 /* Westeros_FundIOSTests.swift */,
 				F66CEF28204AB462005878F1 /* Info.plist */,
+				F66CEF31204AB588005878F1 /* SeasonTests.swift */,
+				F66CEF3C204ACE3C005878F1 /* EpisodeTests.swift */,
 			);
 			path = Westeros_FundIOSTests;
+			sourceTree = "<group>";
+		};
+		F66CEF33204AB5D0005878F1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEF4C204B19A6005878F1 /* codeIsComing.png */,
+				F66CEF4B204B19A6005878F1 /* lannister.jpg */,
+				F66CEF4D204B19A6005878F1 /* targaryenSmall.jpg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F66CEF34204AB5D7005878F1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEF36204AB6A3005878F1 /* Season.swift */,
+				F66CEF3A204AC928005878F1 /* Episode.swift */,
+				F66CEF3E204ADA38005878F1 /* Repository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F66CEF35204AB5DD005878F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEF44204B0D14005878F1 /* SeasonDetailViewController.swift */,
+				F66CEF45204B0D14005878F1 /* SeasonDetailViewController.xib */,
+				F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */,
+				F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +230,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66CEF4E204B19A6005878F1 /* lannister.jpg in Resources */,
+				F66CEF50204B19A6005878F1 /* targaryenSmall.jpg in Resources */,
+				F66CEF47204B0D14005878F1 /* SeasonDetailViewController.xib in Resources */,
+				F66CEF54204B2AC0005878F1 /* SeasonListViewController.xib in Resources */,
 				F66CEF1C204AB462005878F1 /* LaunchScreen.storyboard in Resources */,
+				F66CEF4F204B19A6005878F1 /* codeIsComing.png in Resources */,
 				F66CEF19204AB462005878F1 /* Assets.xcassets in Resources */,
-				F66CEF17204AB462005878F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66CEF14204AB462005878F1 /* ViewController.swift in Sources */,
+				F66CEF37204AB6A3005878F1 /* Season.swift in Sources */,
+				F66CEF53204B2AC0005878F1 /* SeasonListViewController.swift in Sources */,
+				F66CEF3B204AC928005878F1 /* Episode.swift in Sources */,
 				F66CEF12204AB462005878F1 /* AppDelegate.swift in Sources */,
+				F66CEF46204B0D14005878F1 /* SeasonDetailViewController.swift in Sources */,
+				F66CEF3F204ADA38005878F1 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66CEF27204AB462005878F1 /* Westeros_FundIOSTests.swift in Sources */,
+				F66CEF32204AB588005878F1 /* SeasonTests.swift in Sources */,
+				F66CEF3D204ACE3C005878F1 /* EpisodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +283,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F66CEF15204AB462005878F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F66CEF16204AB462005878F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F66CEF1A204AB462005878F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -354,7 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NMCY24956;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Westeros_FundIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sergioreyero.Westeros-FundIOS";
@@ -369,7 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NMCY24956;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Westeros_FundIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sergioreyero.Westeros-FundIOS";
