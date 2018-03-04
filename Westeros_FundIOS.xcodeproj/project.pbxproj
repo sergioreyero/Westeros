@@ -24,6 +24,11 @@
 		F66CEF54204B2AC0005878F1 /* SeasonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */; };
 		F66CEF82204B4B56005878F1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF81204B4B56005878F1 /* Parser.swift */; };
 		F66CEF84204BEB6B005878F1 /* RepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF83204BEB6B005878F1 /* RepositoryTest.swift */; };
+		F66CEF87204BF556005878F1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF86204BF556005878F1 /* UIViewController.swift */; };
+		F66CEF8A204BFEC8005878F1 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF88204BFEC8005878F1 /* EpisodeListViewController.swift */; };
+		F66CEF8B204BFEC8005878F1 /* EpisodeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF89204BFEC8005878F1 /* EpisodeListViewController.xib */; };
+		F66CEF8E204BFEE5005878F1 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF8C204BFEE5005878F1 /* EpisodeDetailViewController.swift */; };
+		F66CEF8F204BFEE5005878F1 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF8D204BFEE5005878F1 /* EpisodeDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonListViewController.xib; sourceTree = "<group>"; };
 		F66CEF81204B4B56005878F1 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F66CEF83204BEB6B005878F1 /* RepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTest.swift; sourceTree = "<group>"; };
+		F66CEF86204BF556005878F1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F66CEF88204BFEC8005878F1 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
+		F66CEF89204BFEC8005878F1 /* EpisodeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeListViewController.xib; sourceTree = "<group>"; };
+		F66CEF8C204BFEE5005878F1 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		F66CEF8D204BFEE5005878F1 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		F66CEF10204AB462005878F1 /* Westeros_FundIOS */ = {
 			isa = PBXGroup;
 			children = (
+				F66CEF85204BF539005878F1 /* UIKitExtensions */,
 				F66CEF35204AB5DD005878F1 /* Controllers */,
 				F66CEF34204AB5D7005878F1 /* Domain */,
 				F66CEF33204AB5D0005878F1 /* Assets */,
@@ -149,8 +160,20 @@
 				F66CEF45204B0D14005878F1 /* SeasonDetailViewController.xib */,
 				F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */,
 				F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */,
+				F66CEF88204BFEC8005878F1 /* EpisodeListViewController.swift */,
+				F66CEF89204BFEC8005878F1 /* EpisodeListViewController.xib */,
+				F66CEF8C204BFEE5005878F1 /* EpisodeDetailViewController.swift */,
+				F66CEF8D204BFEE5005878F1 /* EpisodeDetailViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F66CEF85204BF539005878F1 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEF86204BF556005878F1 /* UIViewController.swift */,
+			);
+			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +261,13 @@
 			files = (
 				F66CEF4E204B19A6005878F1 /* lannister.jpg in Resources */,
 				F66CEF50204B19A6005878F1 /* targaryenSmall.jpg in Resources */,
+				F66CEF8B204BFEC8005878F1 /* EpisodeListViewController.xib in Resources */,
 				F66CEF47204B0D14005878F1 /* SeasonDetailViewController.xib in Resources */,
 				F66CEF54204B2AC0005878F1 /* SeasonListViewController.xib in Resources */,
 				F66CEF1C204AB462005878F1 /* LaunchScreen.storyboard in Resources */,
 				F66CEF4F204B19A6005878F1 /* codeIsComing.png in Resources */,
 				F66CEF19204AB462005878F1 /* Assets.xcassets in Resources */,
+				F66CEF8F204BFEE5005878F1 /* EpisodeDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +290,10 @@
 				F66CEF3B204AC928005878F1 /* Episode.swift in Sources */,
 				F66CEF12204AB462005878F1 /* AppDelegate.swift in Sources */,
 				F66CEF46204B0D14005878F1 /* SeasonDetailViewController.swift in Sources */,
+				F66CEF8E204BFEE5005878F1 /* EpisodeDetailViewController.swift in Sources */,
 				F66CEF3F204ADA38005878F1 /* Repository.swift in Sources */,
+				F66CEF8A204BFEC8005878F1 /* EpisodeListViewController.swift in Sources */,
+				F66CEF87204BF556005878F1 /* UIViewController.swift in Sources */,
 				F66CEF82204B4B56005878F1 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

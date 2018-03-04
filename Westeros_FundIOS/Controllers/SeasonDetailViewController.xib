@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeasonDetailViewController" customModule="Westeros_FundIOS" customModuleProvider="target">
             <connections>
-                <outlet property="Label1" destination="FiQ-B2-m4M" id="bF9-Rj-t0X"/>
                 <outlet property="date" destination="VPt-eF-xFc" id="ccj-cd-E4m"/>
                 <outlet property="name" destination="FiQ-B2-m4M" id="sve-SZ-tDR"/>
                 <outlet property="totalEpisodes" destination="0vs-DR-ecc" id="eZH-It-dLz"/>
@@ -39,14 +38,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPt-eF-xFc">
-                    <rect key="frame" x="206" y="253" width="42" height="30"/>
+                    <rect key="frame" x="206" y="253" width="153" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vs-DR-ecc">
-                    <rect key="frame" x="206" y="200" width="42" height="30"/>
+                    <rect key="frame" x="206" y="200" width="153" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
