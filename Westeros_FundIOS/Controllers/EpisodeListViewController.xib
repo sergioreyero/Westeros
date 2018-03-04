@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeListViewController" customModule="Westeros_FundIOS" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Ymf-iy-lDS" id="tlO-fx-548"/>
                 <outlet property="view" destination="Ymf-iy-lDS" id="0c2-xG-XYR"/>
             </connections>
         </placeholder>

@@ -12,6 +12,8 @@ class EpisodeDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var startDateEpisodeLabel: UILabel!
+    @IBOutlet weak var seasonEpisodeLabel: UILabel!
     //MARK: - Properties
     
     var model: Episode
@@ -31,7 +33,7 @@ class EpisodeDetailViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        syncModelEpisodeDVC()
+        syncModelEpisodeDetail()
     }
     
     override func viewDidLoad() {
@@ -46,27 +48,16 @@ class EpisodeDetailViewController: UIViewController {
     }
     
     //MARK: - Sync
-    func syncModelEpisodeDVC(){
+    func syncModelEpisodeDetail(){
         titleLabel.text = model.title
-        
+        startDateEpisodeLabel.text = "Launch Date: \(model.parse(date: model.launchDate))"
+        seasonEpisodeLabel.text = model.season.name
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
 extension EpisodeDetailViewController: EpisodeListViewControllerDelegate{
-    func episodeListViewController(_ viewController: EpisodeListViewController, didSelectEpisode episode: Episode) {
-        self.model = episode
-        syncModelEpisodeDVC()
+    func episodeListViewController(_ vc: EpisodeListViewController) {
         navigationController?.pushViewController(self, animated: true)
     }
-    
 }
