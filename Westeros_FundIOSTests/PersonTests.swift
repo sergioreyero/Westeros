@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Westeros
+@testable import Westeros_FundIOS
 
 class PersonTests: XCTestCase {
     

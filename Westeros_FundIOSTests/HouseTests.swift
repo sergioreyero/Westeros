@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Westeros
+@testable import Westeros_FundIOS
 
 class HouseTests: XCTestCase {
     
@@ -88,7 +88,7 @@ class HouseTests: XCTestCase {
     }
     
     func testHouseComparison() {
-        XCTAssertLessThan(starkHouse, lannisterHouse)
+        XCTAssertGreaterThan(starkHouse, lannisterHouse)
     }
     
     func testHouseReturnsSortedArrayOfMembers() {
