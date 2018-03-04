@@ -20,7 +20,7 @@ protocol EpisodeListViewControllerDelegate: class {
 class EpisodeListViewController: UITableViewController {
     
     // Mark: - Properties
-    let model: [Episode]
+    var model: [Episode]
     weak var delegate: EpisodeListViewControllerDelegate?
     
     // Mark: - Initialization
@@ -41,6 +41,41 @@ class EpisodeListViewController: UITableViewController {
         let indexPath = IndexPath(row: lastRow, section: 0)
         
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Nos damos de alta ...
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(seasonDidChange), name: Notification.Name(SEASON_DID_CHANGE_NOTIFICATION_NAME), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Nos damos de baja ...
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    @objc func seasonDidChange(notification: Notification) {
+        // Extraer el userInfo de la notification
+        guard let info = notification.userInfo else {
+            return
+        }
+        let season = info[SEASON_KEY] as? Season
+        
+        // Actualizar el modelo
+        guard let model = season?.sortedEpisodes else { return }
+        self.model = model
+        
+        // Sincronizar la vista
+        syncModelWithView()
+    }
+    
+    func syncModelWithView() {
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
