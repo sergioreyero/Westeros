@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MemberListViewControllerDelegate: class{
+    func MemberListViewController(_ vc:MemberListViewController)
+}
+
 class MemberListViewController: UIViewController {
 
     // Mark: - Outlets
@@ -15,6 +19,7 @@ class MemberListViewController: UIViewController {
     
     // Mark: - Properties
     var model: [Person]
+    var delegate: MemberListViewControllerDelegate?
     
     // Mark: - Initialization
     init(model: [Person]) {
@@ -30,6 +35,8 @@ class MemberListViewController: UIViewController {
     // Mark: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
         
         // Asignamos la fuente de datos
         tableView.dataSource = self
@@ -95,6 +102,17 @@ extension MemberListViewController: UITableViewDataSource {
         
         // Devolver la celda
         return cell
+    }
+}
+
+extension MemberListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+        let member = model[indexPath.row]
+        let memberDetailViewController = MemberDetailViewController(model: member)
+        navigationController?.pushViewController(memberDetailViewController, animated: true)
+        
+        delegate?.MemberListViewController(self)
     }
 }
 

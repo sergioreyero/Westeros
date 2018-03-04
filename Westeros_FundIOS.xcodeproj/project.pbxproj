@@ -41,6 +41,8 @@
 		F66CEFA3204C593B005878F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF99204C593B005878F1 /* Person.swift */; };
 		F66CEFA6204C5992005878F1 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEFA4204C5992005878F1 /* PersonTests.swift */; };
 		F66CEFA7204C5992005878F1 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEFA5204C5992005878F1 /* HouseTests.swift */; };
+		F66CEFB2204C88D0005878F1 /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEFB0204C88D0005878F1 /* MemberDetailViewController.swift */; };
+		F66CEFB3204C88D0005878F1 /* MemberDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEFB1204C88D0005878F1 /* MemberDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		F66CEF99204C593B005878F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F66CEFA4204C5992005878F1 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		F66CEFA5204C5992005878F1 /* HouseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
+		F66CEFB0204C88D0005878F1 /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		F66CEFB1204C88D0005878F1 /* MemberDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 				F66CEF89204BFEC8005878F1 /* EpisodeListViewController.xib */,
 				F66CEF8C204BFEE5005878F1 /* EpisodeDetailViewController.swift */,
 				F66CEF8D204BFEE5005878F1 /* EpisodeDetailViewController.xib */,
+				F66CEFB0204C88D0005878F1 /* MemberDetailViewController.swift */,
+				F66CEFB1204C88D0005878F1 /* MemberDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 				F66CEF19204AB462005878F1 /* Assets.xcassets in Resources */,
 				F66CEF8F204BFEE5005878F1 /* EpisodeDetailViewController.xib in Resources */,
 				F66CEFA0204C593B005878F1 /* HouseListViewController.xib in Resources */,
+				F66CEFB3204C88D0005878F1 /* MemberDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66CEFB2204C88D0005878F1 /* MemberDetailViewController.swift in Sources */,
 				F66CEF37204AB6A3005878F1 /* Season.swift in Sources */,
 				F66CEF53204B2AC0005878F1 /* SeasonListViewController.swift in Sources */,
 				F66CEF3B204AC928005878F1 /* Episode.swift in Sources */,
