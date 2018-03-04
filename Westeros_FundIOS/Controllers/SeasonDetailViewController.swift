@@ -46,6 +46,7 @@ class SeasonDetailViewController: UIViewController {
         name.text = model.name
         totalEpisodes.text = String(model.numberOfEpisodes)
         date.text = model.parse(date: model.startDate)
+        title = model.name 
     }
     
     // MARK: - UI
