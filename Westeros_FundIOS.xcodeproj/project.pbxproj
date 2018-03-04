@@ -22,6 +22,8 @@
 		F66CEF50204B19A6005878F1 /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF4D204B19A6005878F1 /* targaryenSmall.jpg */; };
 		F66CEF53204B2AC0005878F1 /* SeasonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */; };
 		F66CEF54204B2AC0005878F1 /* SeasonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */; };
+		F66CEF82204B4B56005878F1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF81204B4B56005878F1 /* Parser.swift */; };
+		F66CEF84204BEB6B005878F1 /* RepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEF83204BEB6B005878F1 /* RepositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F66CEF4D204B19A6005878F1 /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F66CEF51204B2AC0005878F1 /* SeasonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewController.swift; sourceTree = "<group>"; };
 		F66CEF52204B2AC0005878F1 /* SeasonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonListViewController.xib; sourceTree = "<group>"; };
+		F66CEF81204B4B56005878F1 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F66CEF83204BEB6B005878F1 /* RepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				F66CEF18204AB462005878F1 /* Assets.xcassets */,
 				F66CEF1A204AB462005878F1 /* LaunchScreen.storyboard */,
 				F66CEF1D204AB462005878F1 /* Info.plist */,
+				F66CEF81204B4B56005878F1 /* Parser.swift */,
 			);
 			path = Westeros_FundIOS;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				F66CEF28204AB462005878F1 /* Info.plist */,
 				F66CEF31204AB588005878F1 /* SeasonTests.swift */,
 				F66CEF3C204ACE3C005878F1 /* EpisodeTests.swift */,
+				F66CEF83204BEB6B005878F1 /* RepositoryTest.swift */,
 			);
 			path = Westeros_FundIOSTests;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 				F66CEF12204AB462005878F1 /* AppDelegate.swift in Sources */,
 				F66CEF46204B0D14005878F1 /* SeasonDetailViewController.swift in Sources */,
 				F66CEF3F204ADA38005878F1 /* Repository.swift in Sources */,
+				F66CEF82204B4B56005878F1 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 			files = (
 				F66CEF32204AB588005878F1 /* SeasonTests.swift in Sources */,
 				F66CEF3D204ACE3C005878F1 /* EpisodeTests.swift in Sources */,
+				F66CEF84204BEB6B005878F1 /* RepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
