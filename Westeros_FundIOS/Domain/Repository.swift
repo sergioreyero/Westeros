@@ -12,6 +12,20 @@ final class Repository {
     static let local = LocalFactory()
 }
 
+// TODO: Revisar implementación más generica para usar con otros Date
+func parseToDate(string: String) -> Date {
+    let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
+    let DateArray = string.components(separatedBy: "/")
+    let components = NSDateComponents()
+    components.year = Int(DateArray[2])!
+    components.month = Int(DateArray[1])!
+    components.day = Int(DateArray[0])!
+    components.timeZone = TimeZone(abbreviation: "GMT+0:00")
+    let date = calendar?.date(from: components as DateComponents)
+    
+    return date!
+}
+
 protocol SeasonFactory {
     typealias FilterSeason = (Season) -> Bool
     
@@ -26,41 +40,34 @@ extension LocalFactory: SeasonFactory {
     
     var seasons: [Season] {
         // TODO: Tratamiento de Date - String-->Date
-        //17-04-2011
-        let season1 = Season(name: "Season 1", startDate: Date(timeIntervalSinceReferenceDate: 324700000))
-        let e1s1 = Episode(title: "Winter Is Coming", launchDate: Date(timeIntervalSinceReferenceDate: 324700000), season: season1)
-        let e2s1 = Episode(title: "The Kingsroad", launchDate: Date(timeIntervalSinceReferenceDate: 324750000), season: season1)
-        let e3s1 = Episode(title: "Lord Snow", launchDate: Date(timeIntervalSinceReferenceDate: 324750000), season: season1)
+        let season1 = Season(name: "Season 1", startDate: parseToDate(string: "17/04/2011"))
+        let e1s1 = Episode(title: "Winter Is Coming", launchDate: parseToDate(string: "17/04/2011"), season: season1)
+        let e2s1 = Episode(title: "The Kingsroad", launchDate: parseToDate(string: "24/04/2011"), season: season1)
+        let e3s1 = Episode(title: "Lord Snow", launchDate: parseToDate(string: "30/04/2011"), season: season1)
         
-        //01-04-2012
-        let season2 = Season(name: "Season 2", startDate: Date(timeIntervalSinceReferenceDate: 354700000))
-        let e1s2 = Episode(title: "The North Remembers", launchDate: Date(timeIntervalSinceReferenceDate: 354700000), season: season2)
-        let e2s2 = Episode(title: "The Night Lands", launchDate: Date(timeIntervalSinceReferenceDate: 354750000), season: season2)
+        let season2 = Season(name: "Season 2", startDate: parseToDate(string: "01/04/2012"))
+        let e1s2 = Episode(title: "The North Remembers", launchDate: parseToDate(string: "01/04/2012"), season: season2)
+        let e2s2 = Episode(title: "The Night Lands", launchDate: parseToDate(string: "08/04/2012"), season: season2)
         
-        //31-03-2013
-        let season3 = Season(name: "Season 3", startDate: Date(timeIntervalSinceReferenceDate: 384700000))
-        let e1s3 = Episode(title: "Valar Dohaeris", launchDate: Date(timeIntervalSinceReferenceDate: 384700000), season: season3)
-        let e2s3 = Episode(title: "Dark Wings, Dark Words", launchDate: Date(timeIntervalSinceReferenceDate: 384750000), season: season3)
+        let season3 = Season(name: "Season 3", startDate: parseToDate(string: "31/03/2013"))
+        let e1s3 = Episode(title: "Valar Dohaeris", launchDate: parseToDate(string: "31/03/2013"), season: season3)
+        let e2s3 = Episode(title: "Dark Wings, Dark Words", launchDate: parseToDate(string: "07/04/2013"), season: season3)
         
-        //06-04-2014
-        let season4 = Season(name: "Season 4", startDate: Date(timeIntervalSinceReferenceDate: 414700000))
-        let e1s4 = Episode(title: "Two Swords", launchDate: Date(timeIntervalSinceReferenceDate: 414700000), season: season4)
-        let e2s4 = Episode(title: "The Lion and the Rose", launchDate: Date(timeIntervalSinceReferenceDate: 384750000), season: season4)
+        let season4 = Season(name: "Season 4", startDate: parseToDate(string: "06/04/2014"))
+        let e1s4 = Episode(title: "Two Swords", launchDate: parseToDate(string: "06/04/2014"), season: season4)
+        let e2s4 = Episode(title: "The Lion and the Rose", launchDate: parseToDate(string: "13/04/2014"), season: season4)
         
-        //12-04-2015
-        let season5 = Season(name: "Season 5", startDate: Date(timeIntervalSinceReferenceDate: 434700000))
-        let e1s5 = Episode(title: "The Wars to Come", launchDate: Date(timeIntervalSinceReferenceDate: 384700000), season: season5)
-        let e2s5 = Episode(title: "The House of Black and White", launchDate: Date(timeIntervalSinceReferenceDate: 384750000), season: season5)
+        let season5 = Season(name: "Season 5", startDate: parseToDate(string: "12/04/2015"))
+        let e1s5 = Episode(title: "The Wars to Come", launchDate: parseToDate(string: "12/04/2015"), season: season5)
+        let e2s5 = Episode(title: "The House of Black and White", launchDate: parseToDate(string: "19/04/2015"), season: season5)
         
-        //24-04-2016
-        let season6 = Season(name: "Season 6", startDate: Date(timeIntervalSinceReferenceDate: 454700000))
-        let e1s6 = Episode(title: "The Red Woman", launchDate: Date(timeIntervalSinceReferenceDate: 384700000), season: season6)
-        let e2s6 = Episode(title: "Home", launchDate: Date(timeIntervalSinceReferenceDate: 384750000), season: season6)
+        let season6 = Season(name: "Season 6", startDate: parseToDate(string: "24/04/2016"))
+        let e1s6 = Episode(title: "The Red Woman", launchDate: parseToDate(string: "24/04/2016"), season: season6)
+        let e2s6 = Episode(title: "Home", launchDate: parseToDate(string: "01/05/2016"), season: season6)
         
-        //16-07-2017
-        let season7 = Season(name: "Season 7", startDate: Date(timeIntervalSinceReferenceDate: 474700000))
-        let e1s7 = Episode(title: "Dragonstone", launchDate: Date(timeIntervalSinceReferenceDate: 384700000), season: season7)
-        let e2s7 = Episode(title: "Stormborn", launchDate: Date(timeIntervalSinceReferenceDate: 384750000), season: season7)
+        let season7 = Season(name: "Season 7", startDate: parseToDate(string: "16/07/2017"))
+        let e1s7 = Episode(title: "Dragonstone", launchDate: parseToDate(string: "16/07/2017"), season: season7)
+        let e2s7 = Episode(title: "Stormborn", launchDate: parseToDate(string: "23/07/2017"), season: season7)
         
         
         season1.add(episode: e1s1)

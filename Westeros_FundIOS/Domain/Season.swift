@@ -80,11 +80,6 @@ extension Season: Comparable {
     }
 }
 
-//extension Season: CustomStringConvertible{
-//    var description: String {
-//        return "\(name) / \(_chapters.count) episodes / Date: \(parse(date: startDate))"
-//    }
-
 
 
 
