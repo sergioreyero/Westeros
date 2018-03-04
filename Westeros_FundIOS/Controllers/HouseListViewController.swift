@@ -1,6 +1,6 @@
 //
-//  EpisodeListViewController.swift
-//  Westeros_FundIOS
+//  HouseListViewController.swift
+//  Westeros
 //
 //  Created by Sergio Reyero on 04/03/2018.
 //  Copyright © 2018 Sergio Reyero. All rights reserved.
@@ -8,36 +8,37 @@
 
 import UIKit
 
-let EPISODE_KEY = "EpisodeKey"
-let EPISODE_DID_CHANGE_NOTIFICATION_NAME = "EpisodeDidChange"
-let LAST_EPISODE = "LAST_EPISODE"
+let HOUSE_KEY = "HouseKey"
+let HOUSE_DID_CHANGE_NOTIFICATION_NAME = "HouseDidChange"
+let LAST_HOUSE = "LAST_HOUSE"
 
-protocol EpisodeListViewControllerDelegate: class {
+protocol HouseListViewControllerDelegate: class {
     // should, will, did
-    func episodeListViewController(_ viewController: EpisodeListViewController, didSelectEpisode: Episode)
+    func houseListViewController(_ viewController: HouseListViewController, didSelectHouse: House)
 }
 
-class EpisodeListViewController: UITableViewController {
+
+class HouseListViewController: UITableViewController {
     
     // Mark: - Properties
-    let model: [Episode]
-    weak var delegate: EpisodeListViewControllerDelegate?
+    let model: [House]
+    weak var delegate: HouseListViewControllerDelegate?
     
     // Mark: - Initialization
-    init(model: [Episode]) {
+    init(model: [House]) {
         self.model = model
         super.init(style: .plain)
-        title = "Episodes"
+        title = "Westeros"
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // Mark: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let lastRow = UserDefaults.standard.integer(forKey: LAST_EPISODE)
+        let lastRow = UserDefaults.standard.integer(forKey: LAST_HOUSE)
         let indexPath = IndexPath(row: lastRow, section: 0)
         
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
@@ -47,18 +48,18 @@ class EpisodeListViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
-    
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cellId = "HouseCell"
         
-        let cellId = "EpisodeCell"
-        
-        // Descubrir cual es la episodio que tenemos que mostrar
-        let episode = model[indexPath.row]
+        // Descubrir cual es la casa que tenemos que mostrar
+        let house = model[indexPath.row]
         
         // Crear una celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
@@ -66,8 +67,9 @@ class EpisodeListViewController: UITableViewController {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
         }
         
-        // Sincroniza episode (model) con cell (vista)
-        cell?.textLabel?.text = episode.title
+        // Sincroniza house (model) con cell (vista)
+        cell?.imageView?.image = house.sigil.image
+        cell?.textLabel?.text = house.name
         
         return cell!
         
@@ -76,41 +78,55 @@ class EpisodeListViewController: UITableViewController {
     // MARK: Table View Delegate
     // should, will, did
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Averiguar que episodio han pulsado
-        let episode = model[indexPath.row]
+        // Averiguar que casa han pulsado
+        let house = model[indexPath.row]
         
         // Aviso al delegado
-        delegate?.episodeListViewController(self, didSelectEpisode: episode)
+        delegate?.houseListViewController(self, didSelectHouse: house)
         
         // Mando la misma info a traves de notificaciones
         let notificationCenter = NotificationCenter.default
         
-        let notification = Notification(name: Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [EPISODE_KEY : episode])
+        let notification = Notification(name: Notification.Name(HOUSE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [HOUSE_KEY : house])
         
         notificationCenter.post(notification)
         
-        // Guardar las coordenadas (section, row) de la ultima episodio seleccionada
-        saveLastSelectedEpisode(at: indexPath.row)
+        // Guardar las coordenadas (section, row) de la ultima casa seleccionada
+        saveLastSelectedHouse(at: indexPath.row)
     }
 }
 
-extension EpisodeListViewController {
-    func saveLastSelectedEpisode(at row: Int) {
+extension HouseListViewController {
+    func saveLastSelectedHouse(at row: Int) {
         let defaults = UserDefaults.standard
-        defaults.set(row, forKey: LAST_EPISODE)
+        defaults.set(row, forKey: LAST_HOUSE)
         // Por si las moscas
         defaults.synchronize()
     }
     
-    func lastSelectedEpisode() -> Episode {
+    func lastSelectedHouse() -> House {
         // Extraer la row del User Defaults
-        let row = UserDefaults.standard.integer(forKey: LAST_EPISODE)
+        let row = UserDefaults.standard.integer(forKey: LAST_HOUSE)
         
-        // Averiguar la episodio de ese row
-        let episode = model[row]
+        // Averiguar la casa de ese row
+        let house = model[row]
         
         // Devolverla
-        return episode
+        return house
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
