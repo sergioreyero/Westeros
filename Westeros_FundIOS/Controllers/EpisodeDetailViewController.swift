@@ -51,7 +51,7 @@ class EpisodeDetailViewController: UIViewController {
     func syncModelEpisodeDetail(){
         titleLabel.text = model.title
         startDateEpisodeLabel.text = "Launch Date: \(model.parse(date: model.launchDate))"
-        seasonEpisodeLabel.text = model.season.name
+        seasonEpisodeLabel.text = model.season?.name
     }
     
 }

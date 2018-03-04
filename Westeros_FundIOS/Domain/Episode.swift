@@ -11,7 +11,7 @@ import Foundation
 final class Episode {
     let title: String
     let launchDate: Date
-    let season: Season
+    weak var season: Season?
     
     init(title: String, launchDate: Date, season: Season){
         self.title = title
@@ -29,7 +29,7 @@ final class Episode {
 
 extension Episode {
     var proxyForEquality: String {
-        return "\(title) \(launchDate) \(season.name)"
+        return "\(title) \(launchDate) \(season!.name)"
     }
     
     var proxyForComparison: String {
