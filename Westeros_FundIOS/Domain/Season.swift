@@ -29,8 +29,10 @@ extension Season {
     }
     
     var sortedEpisodes: [Episode] {
-        return _chapters.sorted()
+        return _chapters.sorted(by: {$0.launchDate.timeIntervalSinceNow < $1.launchDate.timeIntervalSinceNow})
     }
+    
+    
     
     func add(episode: Episode) {
         guard episode.season == self else {

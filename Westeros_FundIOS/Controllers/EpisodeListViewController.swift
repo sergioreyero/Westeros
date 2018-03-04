@@ -87,7 +87,7 @@ extension EpisodeListViewController: UITableViewDataSource {
             ?? UITableViewCell(style: .default, reuseIdentifier: cellId)
         
         // Sicronizar celda y persona
-        cell.textLabel?.text = episode.title
+        cell.textLabel?.text = "\(episode.title)   ||   \(episode.parse(date: episode.launchDate))"
         
         // Devolver la celda
         return cell
