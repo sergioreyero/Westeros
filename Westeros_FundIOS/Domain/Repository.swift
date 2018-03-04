@@ -93,12 +93,18 @@ extension LocalFactory: SeasonFactory {
     }
     
 }
+enum HousesEnum: String {
+    case Stark = "Stark"
+    case Lannister = "Lannister"
+    case Targaryen = "Targaryen"
+}
+
     protocol HouseFactory {
-        
         typealias FilterHouse = (House) -> Bool
         
         var houses: [House] { get }
         func house(named: String) -> House?
+        func house(named: HousesEnum) -> House?
         func houses(filteredBy: FilterHouse) -> [House]
     }
     
@@ -136,7 +142,11 @@ extension LocalFactory: SeasonFactory {
         
         func house(named name: String) -> House? {
             let house = houses.filter{ $0.name.uppercased() == name.uppercased() }.first
-            //let house = houses.first{ $0.name.uppercased() == name.uppercased() }
+            return house
+        }
+        
+        func house(named nameEnum: HousesEnum) -> House? {
+            let house = houses.filter{ $0.name == nameEnum.rawValue }.first
             return house
         }
         
